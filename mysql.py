@@ -14,10 +14,7 @@ from sklearn.svm import SVC
 import numpy as np
 import json
 import random
-num1 = random.randint(-1, 0)
-num2 = random.randint(1, 10)
-num3 = random.randint(50, 500)
-num4 = random.randint(0, 8)
+
 
 
 
@@ -37,6 +34,10 @@ def get_all_tasks():
 
 @app.route('/api/bayespredict', methods=['POST'])
 def bayespredict():
+    num1 = random.randint(-1, 0)
+    num2 = random.randint(1, 10)
+    num3 = random.randint(50, 500)
+    num4 = random.randint(0, 8)
     title = request.get_json()
     print(title['Name'])
     myCsvRow="Name"+','+str(num1)+',2,'+str(num3)+','+str(num3)+','+str(num4)+','+str(num4)+',,'+str(title['Name'])+','
@@ -160,6 +161,10 @@ def Neighbors():
 def Neighborspredict():
     title = request.get_json()
     print(title['Name'])
+    num1 = random.randint(-1, 0)
+    num2 = random.randint(1, 10)
+    num3 = random.randint(50, 500)
+    num4 = random.randint(0, 8)
     myCsvRow="Name"+','+str(num1)+',2,'+str(num3)+','+str(num3)+','+str(num4)+','+str(num4)+',,'+str(title['Name'])+','
     with open('predict.csv','a') as fd:
       fd.write("\n"+myCsvRow)
@@ -218,6 +223,10 @@ def Neighbors2():
 def Svmpredict():
     title = request.get_json()
     print(title['Name'])
+    num1 = random.randint(-1, 0)
+    num2 = random.randint(1, 10)
+    num3 = random.randint(50, 500)
+    num4 = random.randint(0, 8)
     myCsvRow="Name"+','+str(num1)+',2,'+str(num3)+','+str(num3)+','+str(num4)+','+str(num4)+',,'+str(title['Name'])+','
     with open('predict.csv','a') as fd:
       fd.write("\n"+myCsvRow)
@@ -313,6 +322,10 @@ def add_ta():
 def Arbrepredict():
     title = request.get_json()
     print(title['Name'])
+    num1 = random.randint(-1, 0)
+    num2 = random.randint(1, 10)
+    num3 = random.randint(50, 500)
+    num4 = random.randint(0, 8)
     myCsvRow="Name"+','+str(num1)+',2,'+str(num3)+','+str(num3)+','+str(num4)+','+str(num4)+',,'+str(title['Name'])+',' 
     with open('predict.csv','a') as fd:
       fd.write("\n"+myCsvRow)
